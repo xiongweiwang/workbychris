@@ -1,0 +1,188 @@
+https://www.hackingwithswift.com/100/swiftui
+
+https://developer.mozilla.org
+
+html css js online
+https://codepen.io/pen/
+
+https://docs.emmet.io/cheat-sheet/
+
+font
+https://fonts.google.com/
+https://cdnjs.com/
+https://fontawesome.com/
+
+css
+https://www.blobmaker.app/
+
+cssgradient
+https://cssgradient.io/
+
+flex
+https://caniuse.com/flexbox
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+js
+library:Swiper
+https://playcode.io/javascript
+
+img
+https://picsum.photos/
+
+ang
+appbrewery.github.io/grid-sizing/
+https://appbrewery.github.io/gridgadren/
+
+https://babeljs.io/
+https://codesandbox.io/
+
+p284
+https://www.w3schools.com/tags/ref_standardattributes.asp
+https://developer.mozilla.org/en-US/docs/Web/API/Element/className
+https://picsum.photos/
+
+p285
+CSS Properties
+https://www.w3schools.com/cssref/index.php
+https://www.w3schools.com/cssref/pr_font_font-size.php
+
+p287
+https://github.com/airbnb/javascript/tree/master/react
+
+p289
+https://stackoverflow.com/questions/31354559/using-node-js-require-vs-es6-import-export
+
+p293
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+
+p297
+https://www.emojimeaning.net/
+https://www.emojimeanings.net/list-smileys-people-whatsapp
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl
+
+p301
+https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+https://legacy.reactjs.org/docs/conditional-rendering.html
+
+p304
+https://legacy.reactjs.org/docs/hooks-reference.html#usestate
+https://flatuicolors.com/
+
+p313
+https://stackoverflow.com/questions/11508463/javascript-set-object-key-by-variable?noredirect=1&lq=1
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+
+p315
+https://www.npmjs.com/package/uuid
+
+
+bradtraversy：
+
+http://bored-api.appbrewery.com
+jsonviewer.stack.hu
+
+primitive
+https://academind.com/tutorials/reference-vs-primitive-values
+
+https://jsonplaceholder.typicode.com/
+httpstat.us
+
+Links & Resources
+This is a list of links to resources that we use throughout the course:
+
+CODE:
+Feedback App Repo: cccc
+
+Github Finder App Repo: https://github.com/bradtraversy/github-finder-app
+
+House Marketplace Repo: https://github.com/bradtraversy/house-marketplace
+
+Brad's Gists - https://gist.github.com/bradtraversy
+
+https://gist.github.com/bradtraversy
+
+
+TOOLS:
+https://code.visualstudio.com/
+
+https://git-scm.com/
+
+https://nodejs.org/en/
+
+https://www.postman.com/
+
+https://chrome.google.com/webstore/detail/react-developer-tools
+
+
+
+DOCS:
+
+https://reactjs.org/
+
+https://reactrouter.com/
+
+https://docs.github.com/en/rest
+
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+https://firebase.google.com/
+
+https://leafletjs.com/
+
+https://swiperjs.com/
+
+https://tailwindcss.com/
+
+https://tailwindcss.com/docs/guides/create-react-app
+
+https://daisyui.com/
+
+https://www.npmjs.com/package/concurrently
+
+https://www.npmjs.com/package/json-server
+
+https://www.npmjs.com/package/framer-motion
+
+https://www.npmjs.com/package/react-icons
+
+https://www.npmjs.com/package/react-toastify
+
+https://www.npmjs.com/package/uuid
+
+https://www.npmjs.com/package/axios
+
+
+
+COURSE HELPERS:
+
+Please follow these guys as they are incredibly talented and have contributed a lot to this course :)
+
+
+
+Will Adams
+My right-hand man in the Udemy Q/A
+
+Github: https://github.com/bushblade
+
+Twitter: https://twitter.com/Bushblade
+
+
+
+Mitchel
+Helped with the House Marketplace App
+
+Github: https://github.com/MitchelSt
+
+YouTube Channel: https://www.youtube.com/channel/UC6W89Wklwaki9pc_qSquRtw
+
+
+
+Hassib
+Created the design for the Github Finder app
+
+Github: https://github.com/hassibmoddasser
+
+Twitter: https://twitter.com/hassibmoddasser
+
+

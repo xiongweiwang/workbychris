@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.game-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  z-index: 10;
+}
+
+.score-panel {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.controls button {
+  margin: 5px 0;
+  padding: 5px 10px;
+  background: #2196f3;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.controls button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.settings {
+  margin-top: 10px;
+}
+
+.settings div {
+  margin-bottom: 8px;
+}
+
+input[type='range'],
+input[type='number'] {
+  margin-left: 5px;
+}
+
+.timer {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.victory-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  z-index: 10;
+}

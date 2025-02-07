@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.game-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.game-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  z-index: 10;
+}
+
+.score-panel {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.controls button {
+  margin: 5px 0;
+  padding: 5px 10px;
+  background: #2196f3;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.controls button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.settings {
+  margin-top: 10px;
+}
+
+.settings div {
+  margin-bottom: 8px;
+}
+
+input[type='range'],
+input[type='number'] {
+  margin-left: 5px;
+}
+
+.timer {
+  margin-top: 10px;
+  font-size: 16px;
+}

@@ -1,0 +1,98 @@
+function add(a,b){
+	return a+b
+}
+
+
+function curryAdd(a){
+	return function (b){
+		return a + b
+	}
+}
+
+const add5 = curriedAdd(5); // ??第一个参数，得到一个新的函数    add5 = function(b){ return 5 + b}
+
+console.log(add5(3)); // ?出 8									   add5(3) = function(3){return  5 + 3}
+console.log(add5(10)); // ?出 15
+
+curriedAdd(5)(3）
+
+
+
+
+const add5 = = c
+
+const add5 = 
+ function (b){
+		return 5 + b
+	}
+
+add5(3) = 
+ function (3){
+		return 5 + 3
+	}
+
+=return 5+3 =8
+
+curriedAdd(5)(3)
+
+function curry(fn){
+	return function curried(...args) {
+		if(args.length>=fn.length){
+			return fn(...args);
+		}else{
+			return (...nextArgs) => curried(..args, ..nextArgs);
+		}
+	}
+}
+
+curriedAdd(5)
+
+
+
+curriedMultiply(2)(3)(4))
+
+
+curriedMultiply(2) = 
+	return function(...nextArgs) {
+        return curried(2, ...nextArgs);
+    };
+
+
+curriedMultiplyThree=
+	function(...nextArgs) {
+        return curried(2, ...nextArgs);
+      };
+
+curriedMultiplyThree(3) = 
+	return function(3) {
+        return curried(2,3);
+      };
+ 
+curriedMultiplyFour=
+	curried(2,3)=
+		return function(...nextArgs) {
+        return curried(2,3, ...nextArgs);
+      };
+
+
+curriedMultiplyFour(4) = 
+	return function(...nextArgs) {
+	        return curried(2,3, ...nextArgs);
+	      };
+
+	return function(4) {
+	        return curried(2,3,4);
+	      };
+	      
+	return curried(2,3,4);
+
+curriedMultiplyFour(4) =  curried(2,3,4);
+
+
+multiply(a, b, c) {
+  return a * b * c;
+}
+
+
+
+
