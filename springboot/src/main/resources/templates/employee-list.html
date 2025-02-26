@@ -1,0 +1,199 @@
+<!--  -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mt-4">Employee List</h2>
+        <!-- 显示查询到的总员工数 -->
+        <!-- <p class="text-center text-muted" th:text="'Total Employees: ' + ${employeePage.totalElements}"></p> -->
+
+        <table class="table table-bordered table-striped mx-auto" style="width: 80%;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Actions</th> <!-- 操作按钮 -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="employee : ${employeePage.content}">
+                    <td th:text="${employee.id}"></td>
+                    <td th:text="${employee.name}"></td>
+                    <td th:text="${employee.email}"></td>
+                    <td th:text="${employee.department}"></td>
+                    <td>
+                        <a th:href="@{/employees/edit/{id}(id=${employee.id})}" class="btn btn-primary btn-sm">Edit</a>
+                        <button class="btn btn-danger btn-sm" 
+                                th:attr="data-id=${employee.id}, data-name=${employee.name}" 
+                                onclick="confirmDelete(this)">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 分页按钮 -->
+        <div class="d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item" th:if="${employeePage.hasPrevious()}">
+                    <a class="page-link" th:href="@{/employees(page=${employeePage.number - 1}, size=${employeePage.size})}">Previous</a>
+                </li>
+                <li class="page-item" th:each="i : ${#numbers.sequence(0, employeePage.totalPages - 1)}"
+                    th:classappend="${i == employeePage.number} ? ' active' : ''">
+                    <a class="page-link" th:href="@{/employees(page=${i}, size=${employeePage.size})}" th:text="${i + 1}"></a>
+                </li>
+                <li class="page-item" th:if="${employeePage.hasNext()}">
+                    <a class="page-link" th:href="@{/employees(page=${employeePage.number + 1}, size=${employeePage.size})}">Next</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 引入删除确认模态框 -->
+    <div th:replace="fragments/modal :: deleteModal"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/employee.js"></script> <!-- JavaScript 逻辑 -->
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Employee List</h2>
+        <table class="table table-bordered table-striped mx-auto" style="width: 80%;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="employee : ${employeePage.content}">
+                    <td th:text="${employee.id}"></td>
+                    <td th:text="${employee.name}"></td>
+                    <td th:text="${employee.email}"></td>
+                    <td th:text="${employee.department}"></td>
+                    <td>
+                        <a th:href="@{/employees/edit/{id}(id=${employee.id})}" class="btn btn-primary btn-sm">Edit</a>
+                        <button class="btn btn-danger btn-sm delete-btn" th:data-id="${employee.id}">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item" th:if="${employeePage.hasPrevious()}">
+                    <a class="page-link" th:href="@{/employees(page=${employeePage.number - 1}, size=${employeePage.size})}">Previous</a>
+                </li>
+                <li class="page-item" th:each="i : ${#numbers.sequence(0, employeePage.totalPages - 1)}"
+                    th:classappend="${i == employeePage.number} ? ' active' : ''">
+                    <a class="page-link" th:href="@{/employees(page=${i}, size=${employeePage.size})}" th:text="${i + 1}"></a>
+                </li>
+                <li class="page-item" th:if="${employeePage.hasNext()}">
+                    <a class="page-link" th:href="@{/employees(page=${employeePage.number + 1}, size=${employeePage.size})}">Next</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="/js/employee.js"></script>
+</body>
+</html> -->
+
+
+
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Employee List</h2>
+        <table class="table table-bordered table-striped mx-auto" style="width: 80%;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+            <tbody>
+                遍历分页结果
+                <tr th:each="employee : ${employeePage.content}">
+                    <td th:text="${employee.id}"></td>
+                    <td th:text="${employee.name}"></td>
+                    <td th:text="${employee.email}"></td>
+                    <td th:text="${employee.department}"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        分页按钮
+        <div class="d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item" th:if="${employeePage.hasPrevious()}">
+                    <a class="page-link" th:href="@{/employees(page=${employeePage.number - 1}, size=${employeePage.size})}">Previous</a>
+                </li>
+                <li class="page-item" th:each="i : ${#numbers.sequence(0, employeePage.totalPages - 1)}"
+                    th:classappend="${i == employeePage.number} ? ' active' : ''">
+                    <a class="page-link" th:href="@{/employees(page=${i}, size=${employeePage.size})}" th:text="${i + 1}"></a>
+                </li>
+                <li class="page-item" th:if="${employeePage.hasNext()}">
+                    <a class="page-link" th:href="@{/employees(page=${employeePage.number + 1}, size=${employeePage.size})}">Next</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Employee List</title>
+</head>
+<body>
+    <h2>Employee List</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+        </tr>
+        <tr th:each="employee : ${employees}">
+            <td th:text="${employee.id}"></td>
+            <td th:text="${employee.name}"></td>
+            <td th:text="${employee.email}"></td>
+            <td th:text="${employee.department}"></td>
+        </tr>
+    </table>
+</body>
+</html>
+ -->
